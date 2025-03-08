@@ -1,12 +1,41 @@
-# React + Vite
+## Technologies Used
+- React.js
+- Vite
+- Material-UI (MUI)
+- React Router
+- Sonner (for toast notifications)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation
 
-Currently, two official plugins are available:
+### Steps to Run the App
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/MamDouH919/code-challenge-ovarc.git
+   ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Navigate to the project directory:
+   ```sh
+   cd code-challenge-ovarc
+   ```
 
-## Expanding the ESLint configuration
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+5. Open your browser and go to:
+   ```
+   http://localhost:5173
+   ```
+
+
+## API Endpoints
+The app fetches data from local JSON files:
+- `/authors.json` - List of authors
+- `/books.json` - List of books with author references
+- `/stores.json` - List of stores
