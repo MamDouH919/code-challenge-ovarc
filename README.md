@@ -10,7 +10,7 @@
 ### Steps to Run the App
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/your-repo/code-challenge-ovarc.git](https://github.com/MamDouH919/code-challenge-ovarc.git)
+   git clone https://github.com/MamDouH919/code-challenge-ovarc.git
    ```
 
 2. Navigate to the project directory:
