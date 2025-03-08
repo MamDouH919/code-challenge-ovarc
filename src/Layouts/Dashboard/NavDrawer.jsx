@@ -9,11 +9,12 @@ import {
 import { styled } from "@mui/material/styles";
 import { drawerWidth } from "./DashboardLayout";
 import { Link, useLocation } from "react-router";
-import { DashboardContext } from "../../Context/DashboardContext";
-import { RiRefund2Fill } from "react-icons/ri";
-import { MdDashboard } from "react-icons/md";
+import { MdInventory } from "react-icons/md";
 import clsx from "clsx";
 import logo from '../../Assets/logo.png';
+import { IoStorefrontOutline } from "react-icons/io5";
+import { BiCategory } from "react-icons/bi";
+import { GiOpenBook, GiQuillInk } from "react-icons/gi";
 
 // Styled Components
 const PREFIX = "NavDrawer";
@@ -92,31 +93,31 @@ const NavDrawer = () => {
     const linksList = [
         {
             pathname: "/",
-            icon: MdDashboard,
+            icon: BiCategory,
             primary: "shop",
             id: "shop"
         },
         {
             pathname: "/stores",
-            icon: RiRefund2Fill,
+            icon: IoStorefrontOutline,
             primary: "Stores",
             id: "stores"
         },
         {
             pathname: "/author",
-            icon: RiRefund2Fill,
+            icon: GiQuillInk,
             primary: "Author",
             id: "author"
         },
         {
             pathname: "/books",
-            icon: RiRefund2Fill,
+            icon: GiOpenBook,
             primary: "Books",
             id: "books"
         },
         {
             pathname: "stores/cover-discovery",
-            icon: RiRefund2Fill,
+            icon: MdInventory,
             primary: "Cover Discovery",
             id: "cover-discovery"
         },

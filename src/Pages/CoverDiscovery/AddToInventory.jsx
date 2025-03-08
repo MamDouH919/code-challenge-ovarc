@@ -1,9 +1,10 @@
-import { Button, FormControl, InputBase, InputLabel, Stack } from '@mui/material'
+import { Button, FormControl, InputAdornment, InputBase, InputLabel, Stack } from '@mui/material'
 import React, { useEffect } from 'react'
 import CustomDialog from '../../Components/Custom/CustomDialog'
 import InputText from '../../Components/Custom/InputText';
 import InputSelect from '../../Components/Custom/InputSelect';
 import { toast } from 'sonner';
+import { BiDollar } from 'react-icons/bi';
 
 const AddToInventory = ({
     books,
@@ -36,28 +37,7 @@ const AddToInventory = ({
     };
 
     const handleSubmit = () => {
-        setData(prev => {
-            const newData = [...prev];
 
-            if (rowData) {
-                // Editing an existing row
-                return newData.map(item =>
-                    item.id === rowData.id
-                        ? { ...item, name, book, price }
-                        : item
-                );
-            } else {
-                // Adding a new row
-                newData.push({
-                    id: newData.length + 1,
-                    book,
-                    price
-                });
-            }
-            return newData;
-        });
-
-        toast.success(rowData ? 'Book updated successfully' : 'Book added successfully');
 
         // Reset input fields
         setBook("");
@@ -75,16 +55,25 @@ const AddToInventory = ({
                 content={
                     <Stack spacing={2}>
                         <InputSelect
-                            label={"Price"}
+                            label={"Book"}
                             handleChange={handleChange}
                             value={book}
                             options={books.map(book => ({ value: book.name, label: book.name }))}
                         />
                         <InputText
-                            label={"Book Name"}
-                            value={name}
+                            label={"Price"}
+                            value={price}
                             handleChange={handleChangePrice}
                             type={"number"}
+                            InputProps={
+                                {
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <BiDollar />
+                                        </InputAdornment>
+                                    ),
+                                }
+                            }
                         />
                     </Stack>
                 }

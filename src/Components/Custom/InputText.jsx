@@ -1,11 +1,13 @@
-import { TextField } from '@mui/material'
+import { Search } from '@mui/icons-material'
+import { InputAdornment, TextField } from '@mui/material'
 import React from 'react'
 
 const InputText = ({
     label,
     value,
     handleChange,
-    type
+    type,
+    InputProps
 }) => {
 
     return (
@@ -16,6 +18,7 @@ const InputText = ({
             type={type ?? 'text'}
             value={value}
             onChange={handleChange}
+            InputProps={InputProps}
         />
 
     )
